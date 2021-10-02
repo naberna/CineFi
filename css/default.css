@@ -10315,8 +10315,17 @@ footer h5 {
   }
   .navbar-toggler .fa-bars {
     display: initial;
-  }
-  .navbar-toggler.collapsed > .fa-times {
+    }
+    
+    .navbar-toggler .fa-times {
     display: none;
-  }
+    }
+    
+    .navbar-toggler.collapsed .fa-bars {
+    display: none;
+    }
+    
+    .navbar-toggler.collapsed .fa-times {
+    display: initial;
+    }
 }
