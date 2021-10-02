@@ -55,7 +55,15 @@
                 <a class="nav-link page-scroll" href="#projects">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#staking">Staking</a>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle main" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Staking
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Buy CINE on UniSwap</a>
+                      <a class="dropdown-item" href="#">Buy CINE on PancakeSwap</a>
+                    </div>
+                  </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="#cine-token"
@@ -161,7 +169,7 @@
                             I confirm i am not a resident or citizen.
                         </label>
                       </div>
-                      <div class="button-area">
+                      <div class="button-area register">
                         <button type="submit" class="btn btn-secondary">Register</button>
                     </div>
                     </form>
@@ -459,8 +467,31 @@
         <div class="button-area mobile">
             <button
                 class="btn btn-primary d-inline-flex flex-row align-items-center"
+                onClick='showWallet()'
               >CONNECT WALLET
               </button>
+          </div>
+          <div id='wallet1'>
+              <button id='close' onClick='closeWallet()'><i class="fas fa-times"></i></button>
+            <button>
+                <img
+                    src="img/dog.png"
+                    class="wallet-image"
+                    alt="Dog Image"
+                />
+                <div class="wallet-title">Meta Mask</div>
+                <div class="text">Connect to your MetaMask Wallet</div>
+            </button>
+            <hr/>
+            <button>
+                <img
+                    src="img/wallnet.png"
+                    class="wallet-image"
+                    alt="wallet Image"
+                />
+                <div class="wallet-title">WalletConnect</div>
+                <div class="text">Scan with WalletConnect to connect</div>
+            </button>
           </div>
           <div class="justify-content-center vh-md-10 mt-4">
             <a class="m-2 text-center text-muted small-xl" href="#">LINKEDIN</a>
