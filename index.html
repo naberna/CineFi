@@ -9,6 +9,9 @@
     />
     <title>CineFi</title>
 
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!--vendors styles-->
     <link
       rel="stylesheet"
@@ -43,7 +46,8 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span data-feather="grid"></span>
+          <i class="fas fa-times"></i>
+          <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
@@ -59,10 +63,10 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#register" id="register">Register</a>
+                <a class="nav-link page-scroll" id="register">Register</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#login" id="login">Login</a>
+                <a class="nav-link page-scroll" id="login">Login</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="#connect-wallet"
@@ -97,10 +101,25 @@
                     <div class="button-area">
                         <button type="submit" class="btn btn-secondary">Log In</button>
                     </div>
-                    <a href="" class="forget-password">Forget Password?</a>
+                    <a id="forgetPassword" class="forget-password">Forget Password?</a>
                   </form>
               </div>
             </div>
+            <div id="forgetPasswordModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close" id="close3"><i class="fa fa-times"></i></span>
+                  <div class="modal-title">FORGET PASSWORD</div>
+                  <form>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="button-area">
+                          <button type="submit" class="btn btn-secondary">Reset Password</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
 
             <div id="registerModal" class="modal">
                 <!-- Modal content -->
@@ -435,6 +454,30 @@
         <div class="image-area">
           <img src="img/golden.png" class="text-center golden" alt="Golden" />
         </div>
+      </div>
+      <div class="mobile-shown">
+        <div class="button-area mobile">
+            <button
+                class="btn btn-primary d-inline-flex flex-row align-items-center"
+              >CONNECT WALLET
+              </button>
+          </div>
+          <div class="justify-content-center vh-md-10 mt-4">
+            <a class="m-2 text-center text-muted small-xl" href="#">LINKEDIN</a>
+            <a class="m-2 mt-2 text-center text-muted small-xl" href="#"
+              >MEDIUM</a
+            >
+            <a class="m-2 mt-2 text-center text-muted small-xl" href="#"
+              >TWITTER</a
+            >
+          </div>
+          <ul>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Staking</a></li>
+              <li><a href="#">Cine Token</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Login</a></li>
+          </ul>
       </div>
     </section>
 

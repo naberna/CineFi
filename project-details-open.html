@@ -46,7 +46,8 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span data-feather="grid"></span>
+          <i class="fas fa-times"></i>
+          <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
@@ -62,17 +63,110 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#register">Register</a>
+                <a class="nav-link page-scroll" id="register">Register</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#login">Login</a>
+                <a class="nav-link page-scroll" id="login">Login</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="#connect-wallet"
                   >Connect Wallet</a
                 >
               </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    EN
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">EN</a>
+                      <a class="dropdown-item" href="#">TR</a>
+                    </div>
+                  </div>
+              </li>
             </ul>
+
+            <div id="loginModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close" id="close"><i class="fa fa-times"></i></span>
+                <div class="modal-title">LOGIN</div>
+                <form>
+                    <div class="form-group">
+                      <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                    </div>
+                    <div class="button-area">
+                        <button type="submit" class="btn btn-secondary">Log In</button>
+                    </div>
+                    <a id="forgetPassword" class="forget-password">Forget Password?</a>
+                  </form>
+              </div>
+            </div>
+            <div id="forgetPasswordModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close" id="close3"><i class="fa fa-times"></i></span>
+                  <div class="modal-title">FORGET PASSWORD</div>
+                  <form>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="button-area">
+                          <button type="submit" class="btn btn-secondary">Reset Password</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
+
+            <div id="registerModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close" id="close2"><i class="fa fa-times"></i></span>
+                  <div class="modal-title">REGISTER</div>
+                  <form>
+                    <div class="row form-group">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Surname">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="registerEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="registerPasswordConfirm" placeholder="Confirm Password">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="registerAddress"placeholder="Address">
+                      </div>
+                      <div class="row form-group">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Province/State">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Country">
+                        </div>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="confirmRegister">
+                        <label class="form-check-label" for="confirmRegister">
+                            I confirm i am not a resident or citizen.
+                        </label>
+                      </div>
+                      <div class="button-area">
+                        <button type="submit" class="btn btn-secondary">Register</button>
+                    </div>
+                    </form>
+                </div>
+              </div>
           </div>
         </nav>
       </div>
@@ -88,7 +182,13 @@
             <h2>OPEN PROJECTS</h2>
           </div>
         </div>
-        <p class="mb-5 mt-5 lead">ONLY ME</p>
+        <div class="social-adaptive">
+          <p class="mb-5 mt-5 lead">ONLY ME</p>
+          <div class="socials mobile">
+            <a href="#"><i class="fas fa-globe"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
         <div class="row mt-5">
           <div class="col-md-6">
             <div class="card">
@@ -253,6 +353,30 @@
             </div>
             <hr />
           </div>
+        </div>
+        <div class="mobile-shown">
+          <div class="button-area mobile">
+              <button
+                  class="btn btn-primary d-inline-flex flex-row align-items-center"
+                >CONNECT WALLET
+                </button>
+            </div>
+            <div class="justify-content-center vh-md-10 mt-4">
+              <a class="m-2 text-center text-muted small-xl" href="#">LINKEDIN</a>
+              <a class="m-2 mt-2 text-center text-muted small-xl" href="#"
+                >MEDIUM</a
+              >
+              <a class="m-2 mt-2 text-center text-muted small-xl" href="#"
+                >TWITTER</a
+              >
+            </div>
+            <ul>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Staking</a></li>
+                <li><a href="#">Cine Token</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
         </div>
       </div>
       <img src="img/background-1.png" class="background-image middle" alt="Background Image"/>
