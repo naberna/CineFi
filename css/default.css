@@ -9451,8 +9451,6 @@ footer h5 {
   position: fixed;
   top: 10vh;
   left: 10vw;
-  width: 80vw;
-  height: 80vw;
   padding: 2rem 1rem;
   text-align: center;
   z-index: 1;
@@ -9501,4 +9499,31 @@ footer h5 {
 }
 #wallet1 #close {
   position: relative;
+}
+
+#connectWalletModal .modal-content {
+  display: grid;
+  width: 40%;
+  background: #ffffff;
+  border-radius: 32px;
+  color: rgba(0, 0, 0, 0.32);
+}
+
+#connectWalletModal .inner-wallet {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+#connectWalletModal .close {
+  color: #000000;
+}
+
+#connectWalletModal button {
+  border: none;
+  background-color: #ffffff;
+}
+
+#connectWalletModal .text {
+  color: rgba(0, 0, 0, 0.32);
 }
